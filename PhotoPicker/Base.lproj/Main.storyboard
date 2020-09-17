@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ld-zS-Cjd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cgR-FO-H9F">
+            <objects>
+                <navigationController id="4ld-zS-Cjd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LbB-Te-w0E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e1U-DG-t4c" kind="relationship" relationship="rootViewController" id="4TI-mU-FPH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36J-xz-JxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883" y="-179"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kES-gy-j4y">
+            <objects>
+                <viewController id="e1U-DG-t4c" customClass="ViewController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZY-3F-acw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klR-hQ-WXD">
+                                <rect key="frame" x="185" y="433" width="44" height="30"/>
+                                <state key="normal" title="Album"/>
+                                <connections>
+                                    <action selector="tappedAlbumButton:" destination="e1U-DG-t4c" eventType="touchUpInside" id="1Iy-gm-3ku"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="klR-hQ-WXD" firstAttribute="centerY" secondItem="cZY-3F-acw" secondAttribute="centerY" id="OuD-On-6LD"/>
+                            <constraint firstItem="klR-hQ-WXD" firstAttribute="centerX" secondItem="cZY-3F-acw" secondAttribute="centerX" id="mia-Zv-Kug"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ldQ-L4-rAm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PUL-HY-ZTA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="512-Qb-y8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-179"/>
+        </scene>
+    </scenes>
+</document>

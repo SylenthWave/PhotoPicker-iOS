@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3C6-Ab-VW8" customClass="PageSheetNavBarView" customModule="MNPhotoPicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-c7-19Y">
+                    <rect key="frame" x="313" y="0.0" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="Gxt-We-Em0"/>
+                    </constraints>
+                    <state key="normal" image="close_button_icon"/>
+                    <connections>
+                        <action selector="close:" destination="3C6-Ab-VW8" eventType="touchUpInside" id="U7b-Vf-iTo"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-Ub-wtD">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="64"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview_unset_photo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-zO-zbd">
+                            <rect key="frame" x="13" y="10" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="CCO-hp-Orh"/>
+                                <constraint firstAttribute="width" constant="44" id="CRo-Hu-fID"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rbk-zO-zbd" firstAttribute="centerY" secondItem="yhF-Ub-wtD" secondAttribute="centerY" id="2aa-o0-zQT"/>
+                        <constraint firstItem="rbk-zO-zbd" firstAttribute="centerX" secondItem="yhF-Ub-wtD" secondAttribute="centerX" id="6dO-UV-2Bp"/>
+                        <constraint firstAttribute="width" constant="70" id="inm-YW-cW4"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Photos Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDJ-2C-9Zm">
+                    <rect key="frame" x="70" y="15" width="133" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIf-RA-axn">
+                    <rect key="frame" x="70" y="28" width="30" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="send:" destination="3C6-Ab-VW8" eventType="touchUpInside" id="FV3-1h-rh6"/>
+                    </connections>
+                </button>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amv-c2-1nd">
+                    <rect key="frame" x="0.0" y="63.666666666666664" width="377" height="0.3333333333333357"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="IDz-wp-Gdo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98430448770523071" green="0.98430746793746948" blue="0.98431414365768433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="GDJ-2C-9Zm" firstAttribute="leading" secondItem="yhF-Ub-wtD" secondAttribute="trailing" id="1j7-Gl-sY5"/>
+                <constraint firstItem="GDJ-2C-9Zm" firstAttribute="top" secondItem="3C6-Ab-VW8" secondAttribute="top" constant="15" id="4hP-Fi-Vti"/>
+                <constraint firstItem="LQf-c7-19Y" firstAttribute="trailing" secondItem="3C6-Ab-VW8" secondAttribute="trailing" id="8Sy-6Q-YOz"/>
+                <constraint firstItem="yhF-Ub-wtD" firstAttribute="top" secondItem="3C6-Ab-VW8" secondAttribute="top" id="Bi5-Rs-gFu"/>
+                <constraint firstItem="LQf-c7-19Y" firstAttribute="top" secondItem="3C6-Ab-VW8" secondAttribute="top" id="EJN-wm-2dm"/>
+                <constraint firstItem="yhF-Ub-wtD" firstAttribute="leading" secondItem="3C6-Ab-VW8" secondAttribute="leading" id="EzR-gK-Jt0"/>
+                <constraint firstAttribute="bottom" secondItem="Amv-c2-1nd" secondAttribute="bottom" id="H4I-eD-NBZ"/>
+                <constraint firstAttribute="trailing" secondItem="Amv-c2-1nd" secondAttribute="trailing" id="P2p-tE-Mvb"/>
+                <constraint firstItem="Amv-c2-1nd" firstAttribute="leading" secondItem="3C6-Ab-VW8" secondAttribute="leading" id="dOe-Cp-leQ"/>
+                <constraint firstAttribute="bottom" secondItem="yhF-Ub-wtD" secondAttribute="bottom" id="dXs-gm-nI9"/>
+                <constraint firstItem="LQf-c7-19Y" firstAttribute="bottom" secondItem="3C6-Ab-VW8" secondAttribute="bottom" id="w67-13-QET"/>
+                <constraint firstItem="fIf-RA-axn" firstAttribute="leading" secondItem="yhF-Ub-wtD" secondAttribute="trailing" id="wIj-Dq-e5U"/>
+                <constraint firstItem="fIf-RA-axn" firstAttribute="top" secondItem="GDJ-2C-9Zm" secondAttribute="bottom" constant="-5" id="yP1-MA-FpW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="LQf-c7-19Y" id="wsF-Fx-Mbs"/>
+                <outlet property="imageBox" destination="yhF-Ub-wtD" id="PAJ-aX-MPN"/>
+                <outlet property="imageView" destination="rbk-zO-zbd" id="FwT-y2-fNK"/>
+                <outlet property="lineView" destination="Amv-c2-1nd" id="Bn7-Rf-iG6"/>
+                <outlet property="sendButton" destination="fIf-RA-axn" id="Xlo-ec-D5a"/>
+                <outlet property="titleLabel" destination="GDJ-2C-9Zm" id="2JW-Ok-MOm"/>
+            </connections>
+            <point key="canvasLocation" x="-300.72463768115944" y="-947.54464285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_button_icon" width="30" height="30"/>
+        <image name="preview_unset_photo_icon" width="40" height="40"/>
+    </resources>
+</document>
