@@ -1,5 +1,6 @@
 # PhotoPicker-iOS
-a photo picker like photos app for iOS
+a photo picker like photos app for iOS    
+一个图片选择控件，交互类似iOS自带Photos App，可以自动处理下载iCloud图片相关逻辑，内置 `PhotoFetcher` 也可以自己有选择的下载存储在iCloud中的图片
 
 ### Demo
 ![wfhRr4.gif](https://s1.ax1x.com/2020/09/18/wfhRr4.gif)
@@ -23,6 +24,16 @@ class ViewController: UIViewController {
             print(result.assets)
         }
     }
+}
+```
+
+## Handle icloud image
+
+```swift
+PhotoFetcher().fetch(asset: asset, targetSize: targeSize, progressHandler: { (progress, error) in
+    progressHandler?(progress, error)
+}) { (image, info) in
+    completionHandler(image)
 }
 ```
 
